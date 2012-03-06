@@ -1,0 +1,50 @@
+body {
+  padding-top: 140px; /* 60px to make the container go all the way to the bottom of the topbar */
+  background:#eee;
+}
+div.navbar-fixed-top {
+  position:absolute;
+  height:115px;
+  border-bottom:4px solid #841114;
+}
+div.navbar-fixed-top div.navbar-inner {
+  background:#aaa;
+  background: #999999; /* Old browsers */
+  background: -moz-linear-gradient(top,  #999999 0%, #aaaaaa 64%, #c8bdb5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#999999), color-stop(64%,#aaaaaa), color-stop(100%,#c8bdb5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #999999 0%,#aaaaaa 64%,#c8bdb5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #999999 0%,#aaaaaa 64%,#c8bdb5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #999999 0%,#aaaaaa 64%,#c8bdb5 100%); /* IE10+ */
+  background: linear-gradient(top,  #999999 0%,#aaaaaa 64%,#c8bdb5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#c8bdb5',GradientType=0 ); /* IE6-9 */
+}
+.navbar .brand {
+  padding:23px 30px 24px 20px;
+}
+div.navbar-fixed-top .nav {
+  margin-top:80px;
+  margin-right:20px;
+  float:right;
+}
+.brand i { width:67px; height:67px; overflow:visible; background:#eee; display:block; }
+.brand img { display:block; width:325px; max-width:325px; }
+
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 15px 11px;
+  line-height: 14px;
+  color: #222;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight:bold;
+}
+.navbar .nav > li > a:hover {
+  background-color: transparent;
+  color: #841114;
+  text-decoration: none;
+}
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+  color: #eee;
+  text-decoration: none;
+  background-color: #841114;
+}
