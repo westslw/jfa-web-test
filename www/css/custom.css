@@ -1,11 +1,14 @@
 body {
-  padding-top: 140px; /* 60px to make the container go all the way to the bottom of the topbar */
+  padding-top: 150px; /* 60px to make the container go all the way to the bottom of the topbar */
   background:#eee;
 }
 div.navbar-fixed-top {
   position:absolute;
   height:115px;
   border-bottom:4px solid #841114;
+  -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.6);
+-moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.6);
+box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.6); 
 }
 div.navbar-fixed-top div.navbar-inner {
   background:#aaa;
@@ -48,3 +51,14 @@ div.navbar-fixed-top .nav {
   text-decoration: none;
   background-color: #841114;
 }
+
+div.hero-unit { background:#222 url(../img/hero-bw.jpg) right center no-repeat; padding:0 373px 0 0; color:#eee; margin:0 -4px 30px;}
+div.sidekick { border-right:2px solid #841114; padding:40px; }
+.hero-unit h1 { color:#c8bdb5; font-size:48px; margin:0 0 12px;}
+
+h1, h2 {margin:18px 0 9px; }
+h2 { margin:18px 0 9px;}
+
+img.span1, img.span2, img.span3, img.span4, img.span5, img.span6 { margin-bottom:9px; margin-top:9px; }
+
+[class*="span"]>h1:first-child, [class*="span"]>h2:first-child { margin-top:9px;}
