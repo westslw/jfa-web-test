@@ -54,11 +54,11 @@ div.navbar-fixed-top .nav {
 
 div.hero-unit { background:#222 url(../img/hero-bw.jpg) right center no-repeat; padding:0 373px 0 0; color:#eee; margin:0 -4px 30px;}
 div.sidekick { border-right:2px solid #841114; padding:40px; }
-.hero-unit h1 { color:#c8bdb5; font-size:48px; margin:0 0 12px;}
+.hero-unit h1 { color:#c8bdb5; font-size:40px; margin:0 0 12px;}
 
 h1, h2 {margin:18px 0 9px; }
 h2 { margin:18px 0 9px;}
 
-img.span1, img.span2, img.span3, img.span4, img.span5, img.span6 { margin-bottom:9px; margin-top:9px; }
+img.span1, img.span2, img.span3, img.span4, img.span5, img.span6 { margin-bottom:45px; margin-top:30px; }
 
-[class*="span"]>h1:first-child, [class*="span"]>h2:first-child { margin-top:9px;}
+[class*="span"]>h1:first-child, [class*="span"]>h2:first-child { margin-top:20px;}
