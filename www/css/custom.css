@@ -1,10 +1,10 @@
 body {
-  padding-top: 150px; /* 60px to make the container go all the way to the bottom of the topbar */
+  padding-top: 180px; /* 60px to make the container go all the way to the bottom of the topbar */
   background:#eee;
 }
 div.navbar-fixed-top {
   position:absolute;
-  height:115px;
+  height:145px;
   border-bottom:4px solid #841114;
   -webkit-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.6);
 -moz-box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.6);
@@ -22,11 +22,11 @@ div.navbar-fixed-top div.navbar-inner {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#c8bdb5',GradientType=0 ); /* IE6-9 */
 }
 .navbar .brand {
-  padding:23px 30px 24px 20px;
+  padding:30px 0 0px 20px;
 }
 div.navbar-fixed-top .nav {
-  margin-top:80px;
-  margin-right:20px;
+  margin-top:110px;
+  margin-right:0;
   float:right;
 }
 .brand i { width:67px; height:67px; overflow:visible; background:#eee; display:block; }
@@ -54,11 +54,12 @@ div.navbar-fixed-top .nav {
 
 div.hero-unit { background:#222 url(../img/hero-bw.jpg) right center no-repeat; padding:0 373px 0 0; color:#eee; margin:0 -4px 30px;}
 div.sidekick { border-right:2px solid #841114; padding:40px; }
-.hero-unit h1 { color:#c8bdb5; font-size:40px; margin:0 0 12px;}
+.hero-unit h1 { color:#c8bdb5; font-size:32px; margin:0 0 12px;}
 
 h1, h2 {margin:18px 0 9px; }
 h2 { margin:18px 0 9px;}
 
 img.span1, img.span2, img.span3, img.span4, img.span5, img.span6 { margin-bottom:45px; margin-top:30px; }
+img.tight { margin-top:18.5px;}
 
 [class*="span"]>h1:first-child, [class*="span"]>h2:first-child { margin-top:20px;}
