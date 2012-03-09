@@ -63,3 +63,5 @@ img.span1, img.span2, img.span3, img.span4, img.span5, img.span6 { margin-bottom
 img.tight { margin-top:18.5px;}
 
 [class*="span"]>h1:first-child, [class*="span"]>h2:first-child { margin-top:20px;}
+
+.center { text-align:center; }
