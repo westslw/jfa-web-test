@@ -11,6 +11,35 @@
     <!--[if lt IE 9]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href="css/kafoof.bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/kafoof.min.js"></script>
+    <script>
+      var setupForm = function(k){
+        k.serializeDefinition('#form-definition');
+        var kv = Kafoof.validate();
+        kv.disable();
+        $(this).closest('form').submit(function(e){
+          if(!kv.run()) return false;
+          e.preventDefault();
+          $button = $(this).find('button').attr('disabled',true);
+          $.post(this.action,$(this).find(':input').serialize())
+            .success(function(){
+              $('.form-submit').toggle();
+            }).error(function(){
+              alert('Your message could not be sent. We apologize for the inconvenience.');
+            }).complete(function(){
+              $button.attr('disabled',false);
+            });
+          return false;
+        });
+      };
+      Kafoof.load('#contact-form',{topics:[
+        'Acquiring a business jet',
+        'Selling a business jet',
+        'Business jet consultations'
+      ]},{}).render(setupForm);
+    </script>
   </head>
 
   <body>
@@ -36,72 +65,43 @@
 
     <div class="container">
       <!-- Hero Unit -->
-      <div class="hero-unit"><div class="sidekick">
-        <h1>Kitties are so cute</h1>
-        <p>If you had your own plane, you could take your kitty on board with you. You wouldn't have to use a pet carrier or deal with the other hassles of travel with pets. Don't you wish you could take your kitty on your private jet?</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-      </div></div>
+      <div class="hero-unit with-butler">
+        <div class="butler">
+          <p>jet<i>forward</i> Aviation<br>973 Summerleaf Drive<br>Suite 101<br>San Jose, CA 95120</p>
+          <p>Phone: 408.674.8708<br>Fax: 408.852.0303</p>
+        </div>
+        <div class="sidekick"><form action="contact.php" method="post" style="margin:0" id="contact">
+        <h1 style="margin:0">Contact Us</h1>
+        <div id="contact-form"><textarea style="display:none">
+-- @contact -----------------------
+
+Let's talk about
+[______________________________[^]]
+
+Your message
++---------------------------------+
++                                 +
++                                 +
++---------------------------------+
+
+Your name         Preferred phone
+[_______________] [_______________]
+
+Your email address
+[_________________________________]
+-----------------------------------
+* topic; from:topics; prompt:Choose...
++ message
+* name
+* phone
++ email; validate:EMAIL
+        </textarea></div>
+        <p class="form-submit"><button type="submit" class="btn btn-primary btn-large">Send Message</button><input type="hidden" name="form-definition" id="form-definition"></p>
+        <div class="form-submit alert" style="display:none">
+          <b>Thank you!</b> Your message has been sent.
+        </div>
+      </form></div></div>
       <!-- /Hero Unit -->
-      <!-- One Column -->
-      <h1>Example One-Column Section</h1>
-      <p>The text goes pretty wide this way. Not going to be beautiful or easy to read in most cases. Did I mention that kitties are so cute? Oh the darling kitties!</p>
-      <!-- /One Column -->
-      <!-- Image on Right -->
-      <div class="row">
-        <div class="span7">
-          <h1>Image on the right</h1>
-          <ul>
-            <li>When you do these images it's very important</li>
-            <li>That you not leave the img src pointing to the assets folder</li>
-            <li>Because that won't be accessible on the website</li>
-          </ul>
-        </div>
-        <img class="span5" src="../assets/cit_cj2_ext02_hires.jpg" alt="">
-      </div>
-      <!-- /Image on Right -->
-      <!-- Two Column -->
-      <h1>Example Two-Column Section</h1>
-      <div class="row">
-        <div class="span6">
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        </div>
-        <div class="span6">
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        </div>
-      </div>
-      <!-- /Two Column -->
-      <!-- Image on Left -->
-      <div class="row">
-        <img class="span5" src="../assets/G001_high_resolution.jpg" alt="">
-        <div class="span7">
-          <h1>Image on the left</h1>
-          <ul>
-            <li>It's also important</li>
-            <li>To scale these to a reasonable size when you save them in the www/img folder</li>
-            <li>Right now I'm having the browser do it, and that's a big waste of bandwidth and memory</li>
-          </ul>
-        </div>
-      </div>
-      <!-- /Image on Left -->
-      <!-- Three Column -->
-      <div class="row">
-        <div class="span4">
-          <h2>Three</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Columns</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Are Nice</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-      <!-- /Three Column -->
     </div> <!-- /container -->
     <div class="footer">
       <div class="container">

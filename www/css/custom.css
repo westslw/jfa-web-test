@@ -52,7 +52,10 @@ div.navbar-fixed-top .nav {
 }
 
 div.hero-unit { background:#222 url(../img/hero-bw.jpg) right center no-repeat; padding:0 373px 0 0; color:#eee; margin:0 -4px 30px;}
+div.with-butler { background-image:none; }
 div.sidekick { border-right:2px solid #841114; padding:40px; }
+div.butler { float:right; width:293px; padding:30px 40px; margin-right:-373px; }
+div.with-butler div.sidekick { padding:30px 40px; }
 .hero-unit h1 { color:#c8bdb5; font-size:32px; margin:0 0 12px;}
 
 h1, h2 {margin:18px 0 9px; }
